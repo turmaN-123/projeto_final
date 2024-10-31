@@ -11,10 +11,9 @@ class UsuarioDAO
     {
         $this->pdo = Conexao::getInstance();
     }
-    // INSERT
+   
     public function salvarUsuario(UsuarioDTO $usuarioDTO)
-    {
-        //echo "{$usuarioDTO->getDtNascimentoUsu()}";
+    {        
        
         try {
             $sql = "INSERT INTO usuario (nomeUsu,dtNascimentoUsu,emailUsu,
@@ -29,7 +28,6 @@ class UsuarioDAO
             $perfilUsu = $usuarioDTO->getPerfilUsu();
             $situacaoUsu = $usuarioDTO->getSituacaoUsu();
             
-            //var_dump($dtNascimentoUsu);
 
             $stmt->bindValue(1, $nomeUsuario);
             $stmt->bindValue(2, $dtNascimentoUsu);
@@ -46,7 +44,6 @@ class UsuarioDAO
     }
 
 
-    //LISTAR USUÁRIOS
     public function listarUsuarios()
     {
         try {
@@ -63,7 +60,6 @@ class UsuarioDAO
             echo $exc->getMessage();
         }
     }
-//excluir usuários
     public function excluirUsuario($idUsuario) {
             try {
                 $sql = "DELETE FROM usuario
@@ -112,7 +108,6 @@ class UsuarioDAO
         }
     }
 
-     //PesquisarUsuarioPorId
  public function pesquisarUsuarioPorId($idUsuario) {
     try {
         $sql = "SELECT * FROM usuario WHERE idUsu = {$idUsuario}; ";
@@ -125,8 +120,7 @@ class UsuarioDAO
         echo $exc->getMessage();  
      }
   }
-//
-// MD5('123')
+  
 public function validarLogin($emailUsu,$senhaUsu) {
     echo "{$emailUsu}";
     echo "{$senhaUsu}";

@@ -11,8 +11,6 @@ $usuarioDTO->setIdUsu($idUsuario);
 $usuarioDTO->setNomeUsu($nomeUsuario);
 $usuarioDTO->setDtNascimentoUsu($dtNascimento);
 
-//var_dump($usuarioDTO);
-
 $usuarioDAO = new UsuarioDAO();
 
 $sucesso = $usuarioDAO->alterarUsuario($usuarioDTO);

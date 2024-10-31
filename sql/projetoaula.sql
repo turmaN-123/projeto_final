@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `projeto_final`
+-- Banco de dados: `projeto_final10`
 --
 
 -- --------------------------------------------------------
@@ -28,11 +28,14 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `produto` (
-  `idProd` int(11) NOT NULL,
+  `idProd` int(11) NOT NULL AUTO_INCREMENT,
   `nomeProd` varchar(255) NOT NULL,
   `precoProd` float DEFAULT NULL,
-  `qtdProd` int(11) DEFAULT NULL
+  `qtdProd` int(11) DEFAULT NULL,
+  `imagem` varchar(255),
+  PRIMARY KEY (`idProd`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 
 -- --------------------------------------------------------
 

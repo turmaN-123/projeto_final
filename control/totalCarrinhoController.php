@@ -1,6 +1,5 @@
 <?php
 
-
 include_once '../model/DTO/UsuarioDTO.php';
 include_once '../model/DTO/ProdutoDTO.php';
 include_once '../model/DTO/Carrinho.php'; 
@@ -11,7 +10,7 @@ $carrinho = $_SESSION['carrinho'];
 $idProd = $_GET["idProd"];
 
 if(isset($_GET['acao']) && $_GET['acao'] == 'remover') {
-    //remover item
+   
     echo "entro";
     var_dump($carrinho->getItemCarrinhoByIdProd($idProd));
         if( $carrinho->getItemCarrinhoByIdProd($idProd)->getQtdProd() > 1){
@@ -23,12 +22,9 @@ if(isset($_GET['acao']) && $_GET['acao'] == 'remover') {
         }
     echo "<pre>";
     var_dump($carrinho);
-
 }
 
 if(isset($_GET['acao']) && $_GET['acao'] == 'adicionar') {
-
-    //adicionar ao carrinho
 
     $produto = new ProdutoDTO();    
     $produto->setIdProd($idProd);
@@ -40,7 +36,6 @@ if(isset($_GET['acao']) && $_GET['acao'] == 'adicionar') {
 }
 
 $_SESSION['carrinho'] = $carrinho ;
-
 
 header("Location: ../view/mostraCarrinho.php");
 

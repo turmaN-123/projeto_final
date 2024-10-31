@@ -7,9 +7,4 @@
             
       $todos = $usuarioDAO->listarUsuarios();
 
-    // echo '<pre>';
-    // var_dump($todos);
-
-
-
 ?>

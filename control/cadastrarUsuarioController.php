@@ -2,7 +2,6 @@
 
     require_once '../model/DTO/UsuarioDTO.php';
     require_once '../model/DAO/UsuarioDAO.php';
-
  
       $nomeUsu = strip_tags($_POST["nomeUsu"]);
       $dtNascimentoUsu = ($_POST["dtNascimentoUsu"]);
@@ -24,7 +23,6 @@
       $usuarioDTO->setPerfilUsu($perfilUsu);
       $usuarioDTO->setSituacaoUsu($situacaoUsu);
 
-      //echo "{$usuarioDTO->getDtNascimentoUsu()}";
       $usuarioDAO = new UsuarioDAO();
             
       $sucesso = $usuarioDAO->salvarUsuario($usuarioDTO);

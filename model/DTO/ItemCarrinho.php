@@ -2,7 +2,7 @@
 
     class ItemCarrinho{
         private ProdutoDTO $produto;
-        private $quantidade = 1;//adicionar item já adicionado com qtd = 1
+        private $quantidade = 1;
 
     public function setProduto(ProdutoDTO $produto){
         $this->produto = $produto;

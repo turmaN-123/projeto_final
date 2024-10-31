@@ -1,10 +1,10 @@
 <?php
-//data transfer object - transferencia dos dados do formulario (view)
 class ProdutoDTO{
     private $idProd;
     private $nomeProd;
     private $precoProd;
     private $qtdProd;
+    private $imagem;
 
     public function setIdProd($idProd){
         $this->idProd = $idProd;
@@ -34,6 +34,12 @@ class ProdutoDTO{
     }
     public function getQtdProd(){
         return $this->qtdProd;
+    }
+    public function setImagem($imagem){
+        $this->imagem=$imagem;
+    }
+    public function getImagem(){
+        return $this->imagem;
     }
 
 

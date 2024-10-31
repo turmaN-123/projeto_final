@@ -33,7 +33,6 @@ $carrinho->addItem($produto);
 echo '<pre>';
 var_dump($carrinho);
 
-
 header("Location: ../view/listarProdutos.php");
 
 ?>

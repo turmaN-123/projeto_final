@@ -1,40 +1,44 @@
 <?php
-      require_once '../model/DTO/usuarioDTO.php';
-      require_once '../model/DAO/usuarioDAO.php';
-      require_once '../control/listarUsuariosController.php';
-
-      $idUsuario = $_GET["idUsu"];
-      //var_dump($idUsuario);
-
-      $usuarioDAO = new UsuarioDAO();
-      $retorno = $usuarioDAO->pesquisarUsuarioPorId($idUsuario);
-
-      //var_dump($retorno);
-
-
+session_start();
 ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Entrar no Sistema</title>
 </head>
 <body>
 
-<h1>Alteração de Cadastro de Usuário</h1>
-    <form name="alterarUsuario" 
-      id="alterarUsuario"
-      action="../control/alterarUsuarioController.php" 
-      method="POST">
-
-      <input type="hidden" name="idUsuario" value="<?php echo $retorno["idUsu"]; ?>" >
+<div class="container mt-5">
+    <h2 class="text-center">Entrar no Sistema</h2>
     
-      Nome: <input type="text" name="nomeUsuario" value="<?php echo $retorno["nomeUsu"]; ?>" required><br>
-      Data Nasc: <input type="date" name="dtNascimento" value="<?php echo $retorno["dtNascimentoUsu"]; ?>" required><br>
+    <?php if (isset($_SESSION['error'])): ?>
+        <div class="alert alert-danger" role="alert">
+            <?= $_SESSION['error']; unset($_SESSION['error']); ?>
+        </div>
+    <?php endif; ?>
 
-      <input type="submit" value="Salvar Alteração">
+    <form action="../control/loginController.php" method="POST">
+        <div class="form-group">
+            <label for="emailUsu">E-mail</label>
+            <input type="email" class="form-control" id="emailUsu" name="emailUsu" required>
+        </div>
+        <div class="form-group">
+            <label for="senhaUsu">Senha</label>
+            <input type="password" class="form-control" id="senhaUsu" name="senhaUsu" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Entrar</button>
     </form>
     
+    <div class="text-center mt-3">
+        <a href="#" class="text-muted">Esqueceu a senha?</a>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

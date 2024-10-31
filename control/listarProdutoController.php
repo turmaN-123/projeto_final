@@ -1,19 +1,14 @@
 <?php
 
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
-//var_dump($_SESSION);
+require_once '../model/DTO/ProdutoDTO.php';
+require_once '../model/DAO/ProdutoDAO.php';
 
-    require_once '../model/DTO/ProdutoDTO.php';
-    require_once '../model/DAO/ProdutoDAO.php';
-    
-      $produtoDAO = new ProdutoDAO();
-            
-      $todos = $produtoDAO->listarProdutos();
+$produtoDAO = new ProdutoDAO();
 
-    // echo '<pre>';
-    // var_dump($todos);
-
-
+$todos = $produtoDAO->listarProdutos();
 
 ?>

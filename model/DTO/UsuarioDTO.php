@@ -1,5 +1,4 @@
 <?php
-//data transfer object - transferencia dos dados do formulario (view)
 class UsuarioDTO{
     private $idUsu;
     private $nomeUsu;

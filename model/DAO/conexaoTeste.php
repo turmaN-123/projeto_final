@@ -1,8 +1,5 @@
 <?php
 try {
-    //verificar persistencia nos valores
-    // aceitar caracteres com acentos e cedilhas
-    //levantar exceção ao criar sql com erros
     $options = array(
 
     PDO::ATTR_PERSISTENT => true,
@@ -10,7 +7,7 @@ try {
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
 );
     $conexao = new 
-    PDO("mysql:host=localhost;dbname=projeto_final",
+    PDO("mysql:host=localhost;dbname=projeto_final10",
     "root","", $options);
     echo "Conexão realizada com sucesso";
 

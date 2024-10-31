@@ -11,26 +11,24 @@ class ProdutoDAO
     {
         $this->pdo = Conexao::getInstance();
     }
-    // INSERT
+    
     public function cadastrarProduto(ProdutoDTO $produtoDTO)
     {
-        //echo "{$usuarioDTO->getDtNascimentoUsu()}";
        
         try {
-            $sql = "INSERT INTO produto (nomeProd,precoProd,qtdProd) 
-            VALUES (?,?,?)";
+            $sql = "INSERT INTO produto (nomeProd,precoProd,qtdProd,imagem) 
+            VALUES (?,?,?,?)";
             $stmt = $this->pdo->prepare($sql);
 
             $nomeProd = $produtoDTO->getNomeProd();
             $precoProd  = $produtoDTO->getPrecoProd();
             $qtdProd  = $produtoDTO->getQtdProd();
-
+            $imagem = $produtoDTO->getImagem();
             
-            //var_dump($dtNascimentoUsu);
-
             $stmt->bindValue(1, $nomeProd);
             $stmt->bindValue(2, $precoProd);
             $stmt->bindValue(3, $qtdProd);
+            $stmt->bindValue(4, $imagem);
 
 
             $retorno = $stmt->execute();
@@ -40,8 +38,6 @@ class ProdutoDAO
         }
     }
 
-
-    //LISTAR USUÁRIOS
     public function listarProdutos()
     {
         try {
@@ -59,7 +55,6 @@ class ProdutoDAO
         }
     }
 
-         //PesquisarProdutoPorId
  public function pesquisarProdutoPorId($idProduto) {
     try {
 

@@ -5,12 +5,9 @@ class Conexao {
     private function __construct() {
     }
     public static function getInstance(){
-        //não existe instancia no atributo conexao?
+        
         if(!isset(self::$conexao)){
             try {
-                //verificar persistencia nos valores
-                // aceitar caracteres com acentos e cedilhas
-                //levantar exceção ao criar sql com erros
                 $options = array(
 
                 PDO::ATTR_PERSISTENT => true,
@@ -18,7 +15,7 @@ class Conexao {
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
             );
                 self::$conexao = new 
-                PDO("mysql:host=localhost;dbname=projeto_final",
+                PDO("mysql:host=localhost;dbname=projeto_final10",
                 "root","", $options);
 
             } catch (PDOException $exc) {
