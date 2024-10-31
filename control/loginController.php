@@ -23,13 +23,13 @@ if ($sucesso) {
 
     switch ($_SESSION["perfilUsu"]) {
         case 'Cliente':
-            header("Location: http://localhost/projeto_final10/projeto_final10/view/cliente/cliente.html");
+            header("Location: http://localhost/projeto_final_dezembro/view/cliente/cliente.html");
             break;
         case 'Vendedor':
-            header("Location: http://localhost/projeto_final10/projeto_final10/view/vendedor/vendedor.html");
+            header("Location: http://localhost/projeto_final_dezembro/view/vendedor/vendedor.html");
             break;
         case 'Administrador':
-            header("Location: http://localhost/projeto_final10/projeto_final10/view/index.html");
+            header("Location: http://localhost/projeto_final_dezembro/index.html");
             break;
         default:
             header("Location: ../view/login.php?msg=Perfil não reconhecido.");

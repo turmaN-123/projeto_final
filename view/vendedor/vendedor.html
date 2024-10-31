@@ -30,7 +30,7 @@
         <div id="opcoesCadastro" class="d-flex">          
         </div>
         <div class="ml-auto">
-            <a class="btn btn-outline-secondary" href="http://localhost/projeto_final10/projeto_final10/index.php">Sair</a>
+            <a class="btn btn-outline-secondary" href="http://localhost/projeto_final_dezembro/index.php">Sair</a>
         </div>
     </div>
 </nav>
@@ -45,11 +45,11 @@
     const opcoesCadastro = document.getElementById('opcoesCadastro');
     if (userType === 'Administrador') {
         opcoesCadastro.innerHTML = `
-            <a class="btn btn-primary mr-3" href="http://localhost/projeto_final10/projeto_final10/view/cadastrarProduto.php">Cadastrar Produto</a>        
+            <a class="btn btn-primary mr-3" href="http://localhost/projeto_final_dezembro/view/cadastrarProduto.php">Cadastrar Produto</a>        
         `;
     } else if (userType === 'Vendedor') {
         opcoesCadastro.innerHTML = `
-            <a class="btn btn-primary" href="http://localhost/projeto_final10/projeto_final10/view/cadastrarProduto.php">Cadastrar Produto</a>
+            <a class="btn btn-primary" href="http://localhost/projeto_final_dezembro/view/cadastrarProduto.php">Cadastrar Produto</a>
         `;
     }
 </script>

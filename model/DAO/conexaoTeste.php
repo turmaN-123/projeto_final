@@ -7,7 +7,7 @@ try {
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
 );
     $conexao = new 
-    PDO("mysql:host=localhost;dbname=projeto_final10",
+    PDO("mysql:host=localhost;dbname=projeto_final_dezembro",
     "root","", $options);
     echo "Conexão realizada com sucesso";
 

@@ -31,7 +31,7 @@
            
         </div>
         <div class="ml-auto">
-            <a class="btn btn-outline-secondary" href="logOff.php">Sair</a>
+            <a class="btn btn-outline-secondary" href="http://localhost/projeto_final_dezembro/index.php">Sair</a>
         </div>
     </div>
 </nav>
@@ -48,14 +48,14 @@
 
     if (userType === 'administrador') {
         opcoesCadastro.innerHTML = `
-            <a class="btn btn-primary mr-4" href="cadastrarProduto.php">Cadastrar Produto</a>
-            <a class="btn btn-secondary mr-4" href="cadastrarAdmFunc.php">Cadastrar Vendedor</a>
-            <a class="btn btn-info mr-4" href="http://localhost/projeto_final10/projeto_final10/view/listarProdutos.php">Listar Produto</a>
-            <a class="btn btn-warning" href="http://localhost/projeto_final10/projeto_final10/view/listarUsuarios.php">Listar Usuário</a>
+            <a class="btn btn-primary mr-4" href="http://localhost/projeto_final_dezembro/view/cadastrarProduto.php">Cadastrar Produto</a>
+            <a class="btn btn-secondary mr-4" href="http://localhost/projeto_final_dezembro/view/cadastrarAdmFunc.php">Cadastrar Vendedor</a>
+            <a class="btn btn-info mr-4" href="http://localhost/projeto_final_dezembro/view/listarProdutos.php">Listar Produto</a>
+            <a class="btn btn-warning" href="http://localhost/projeto_final_dezembro/view/listarUsuarios.php">Listar Usuário</a>
         `;
     } else if (userType === 'vendedor') {
         opcoesCadastro.innerHTML = `
-            <a class="btn btn-primary" href="cadastrarProduto.php">Cadastrar Produto</a>
+            <a class="btn btn-primary" href="http://localhost/projeto_final_dezembro/view/cadastrarProduto.php">Cadastrar Produto</a>
         `;
     }
 </script>
