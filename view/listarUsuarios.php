@@ -43,7 +43,7 @@ require_once '../control/alterarUsuarioController.php';
         </table>
 
         
-        <a href="http://localhost/projeto_final_desembro/view/gerarPdf.php" class="btn btn-primary">Gerar PDF</a>
+        <a href="http://localhost/projeto_final_dezembro/view/gerarPdf.php" class="btn btn-primary">Gerar PDF</a>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
